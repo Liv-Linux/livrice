@@ -1,0 +1,32 @@
+# Volume Control
+
+# Increase volume by 5%
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# Decrease volume by 5%
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# Mute/Unmute volume
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+
+# Playerctl Control
+
+# Play/Pause
+XF86AudioPlay
+    playerctl play-pause
+
+# Stop
+XF86AudioStop
+    playerctl stop
+
+# Next track
+XF86AudioNext
+    playerctl next
+
+# Previous track
+XF86AudioPrev
+    playerctl previous
